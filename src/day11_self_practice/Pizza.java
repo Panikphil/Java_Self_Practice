@@ -11,15 +11,9 @@ public class Pizza {
         double cost;
         switch (size.toLowerCase()) {
 
-            case "small" -> {
-                cost = 10;
-            }
-            case "medium" -> {
-                cost = 12;
-            }
-            case "large" -> {
-                cost = 14;
-            }
+            case "small" -> cost = 10;
+            case "medium" -> cost = 12;
+            case "large" -> cost = 14;
             default -> {
                 System.err.println("Size of the pizza is wrong,please try again");
                 cost=0;

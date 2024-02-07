@@ -8,7 +8,7 @@ public class Carpet {
     public double calcCost(double width,double length,double unitPrice,boolean isPersian) {
         double cost;
         if (width > 0 && length > 0 && unitPrice > 0) {
-            if (isPersian == true) {
+            if (isPersian) {
                 return cost = (width * length) * unitPrice + 200;
             } else {
                 return cost = (width * length) * unitPrice;
