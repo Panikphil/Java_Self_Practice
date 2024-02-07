@@ -7,36 +7,38 @@ public class Pizza {
     int numberOfPepperoniTopping;
 
 
-
     public double calcCost(String size, int numberOfPepperoniTopping, int numberOfCheeseTopping) {
         double cost;
         switch (size.toLowerCase()) {
 
-            case "small" ->{ return cost = 10 + (numberOfCheeseTopping * 2) + (numberOfPepperoniTopping * 2);}
-                case "medium"->{ return cost = 12 + (numberOfCheeseTopping * 2) + (numberOfPepperoniTopping * 2);}
-            case "large"-> {
-            return cost = 14 + (numberOfCheeseTopping * 2) + (numberOfPepperoniTopping * 2);
-        }
+            case "small" -> {
+                cost = 10;
+            }
+            case "medium" -> {
+                cost = 12;
+            }
+            case "large" -> {
+                cost = 14;
+            }
             default -> {
                 System.err.println("Size of the pizza is wrong,please try again");
-                return 0;
-
+                cost=0;
+                System.exit(1);
             }
 
-
         }
+        return cost + (numberOfCheeseTopping * 2) + (numberOfPepperoniTopping * 2);
+    }
+    public String toString() {
+        return "Pizza{" +
+                "size='" + size.toLowerCase() + '\'' +
+                ", numberOfCheeseTopping=" + numberOfCheeseTopping +
+                ", numberOfPepperoniTopping=" + numberOfPepperoniTopping +
+                ", pizza cost is: $" + calcCost(size, numberOfPepperoniTopping, numberOfCheeseTopping) +
+                '}';
+
 
     }
-        public String toString () {
-            return "Pizza{" +
-                    "size='" + size.toLowerCase() + '\'' +
-                    ", numberOfCheeseTopping=" + numberOfCheeseTopping +
-                    ", numberOfPepperoniTopping=" + numberOfPepperoniTopping +
-                    ", pizza cost is: $" + calcCost(size,numberOfPepperoniTopping,numberOfCheeseTopping)+
-                    '}';
-
-
-        }
 
     public Pizza(String size, int numberOfCheeseTopping, int numberOfPepperoniTopping) {
         this.size = size;

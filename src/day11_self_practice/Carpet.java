@@ -16,7 +16,8 @@ public class Carpet {
 
         }else {
             System.err.println("Carpet size can't be negative");
-            return cost = 0;
+            System.exit(1);
+           return cost = 0;
         }
     }
     public String toString() {
