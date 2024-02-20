@@ -43,7 +43,7 @@ public class CarShop {
         System.out.println("-------------------------------");
         int PriciestCar = 0;
         int biggestCarPrice = 0;
-        for (int i = 0; i < 1; i++) {
+
             for (int j = 0; j < cars.length; j++) {
                 if (biggestCarPrice < cars[j].price) {
                     biggestCarPrice = cars[j].price;
@@ -51,11 +51,10 @@ public class CarShop {
                 }
             }
             System.out.println("Car with the biggest price: " + cars[PriciestCar]);
-        }
         System.out.println("-------------------------------");
         int cheapestCar = 0;
         int lowestCarPrice = 0;
-        for (int i = 0; i < 1; i++) {
+
             for (int j = 0; j < cars.length; j++) {
                 if (lowestCarPrice > cars[j].price) {
                     lowestCarPrice = cars[j].price;
@@ -65,7 +64,7 @@ public class CarShop {
             System.out.println("Car with the lowest price: " + cars[cheapestCar]);
 
 
-        }
+
 
         System.out.println("-------------------------");
 
